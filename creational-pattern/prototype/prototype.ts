@@ -14,7 +14,7 @@ interface Prototype {
 }
 
 class ConcretePrototype implements Prototype {
-  constructor(private user: UserDetails) {}
+  constructor(private readonly user: UserDetails) {}
 
   public clone(): Prototype {
     const clone = Object.create(this);
